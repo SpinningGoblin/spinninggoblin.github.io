@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "monogram-extended";
+  font-style: normal;
+  src: local("monogram-extended"),
+    url("./monogram-extended.ttf") format("truetype");
+}
+
+body {
+  font-family: -apple-system, "monogram-extended";
+  font-size: calc(10px + 1.75vmin);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f380f;
+  color: #0f380f;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.spinning-goblin {
+  width: calc(10px + 25vmin);
+  height: calc(10px + 25vmin);
+  display: block;
+}
+
+.spinning-right {
+  animation: right 8s infinite linear;
+}
+
+.spinning-left {
+  animation: left 8s infinite linear;
+}
+
+@keyframes left {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
